@@ -1,0 +1,19 @@
+# Logs
+*.log
+
+# Dependencies
+node_modules
+
+# Trash
+.DS_Store
+
+# IDE
+.idea
+.vscode
+
+# Coverage generated files
+coverage
+.nyc_output
+
+# data log
+data

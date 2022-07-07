@@ -1,0 +1,18 @@
+config:
+  environments:
+    local:
+      target: http://localhost:3000
+      phases:
+        - duration: 60
+          arrivalRate: 40
+scenarios:
+  - name: Linked Line Write
+    flow:
+      - post:
+          url: /api/linked-line
+          name: linked-line-write
+          json:
+            message: '{{ $randomNumber(1, 10000) }}-message'
+          expect:
+            - statusCode: 201
+            - contentType: json
